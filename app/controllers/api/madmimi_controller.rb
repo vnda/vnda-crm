@@ -1,4 +1,4 @@
-class ApiController < ActionController::Base
+class Api::MadmimiController < ApplicationController
   before_action :set_shop
 
   def new_client
