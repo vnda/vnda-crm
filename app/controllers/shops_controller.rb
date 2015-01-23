@@ -1,4 +1,6 @@
 class ShopsController < ApplicationController
+  before_action :require_authentication
+
   def index
     @shops = Shop.order(:name)
   end
