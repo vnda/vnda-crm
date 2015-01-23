@@ -11,6 +11,7 @@
       <th>Token da API</th>
       <th> Madmimi - Api_Key </th>
       <th> Madmimi - Email </th>
+      <th> Madmimi - Lista </th>
       <th></th>
     </tr>
   </thead>
@@ -23,6 +24,7 @@
       <td><%= shop.token %></td>
       <td><%= shop.madmimi_api_key %></td>
       <td><%= shop.madmimi_email %></td>
+      <td><%= shop.madmimi_list_name %></td>
       <td class="text-right">
         <%= link_to content_tag(:span, nil, class: 'glyphicon glyphicon-pencil'), edit_shop_path(shop) %>
         <%= link_to 'x', shop, method: :delete, data: { confirm: "Tem certeza que deseja apagar a loja #{shop.name}?" } %>
