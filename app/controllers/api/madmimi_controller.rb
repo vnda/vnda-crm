@@ -2,6 +2,14 @@ class Api::MadmimiController < ApplicationController
   before_action :set_shop
 
   def new_client
+    if @shop
+      response = @shop.mimi.add_to_list(params[:client][:email], @shop.madmimi_list_name, {
+      :first_name   => params[:client][:first_name],
+        :last_name    => params[:client][:last_name],
+        :ultima_compra => params[:client][:updated_at]
+        })
+      puts "#{response} - Loja: #{@shop.name}" if response
+    end
     render json: 'ok'
   end
   private

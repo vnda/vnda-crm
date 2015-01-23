@@ -16,4 +16,8 @@
 class Shop < ActiveRecord::Base
   before_create { self.token = SecureRandom.hex }
 
+  def mimi
+    MadMimi.new(self.madmimi_email, self.madmimi_api_key)
+  end
+
 end
