@@ -25,6 +25,7 @@
       <td><%= shop.madmimi_email %></td>
       <td class="text-right">
         <%= link_to content_tag(:span, nil, class: 'glyphicon glyphicon-pencil'), edit_shop_path(shop) %>
+        <%= link_to 'x', shop, method: :delete, data: { confirm: "Tem certeza que deseja apagar a loja #{shop.name}?" } %>
       </td>
     <% end %>
   </tbody>
