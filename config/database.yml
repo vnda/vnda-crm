@@ -1,0 +1,12 @@
+development: &DEVELOPMENT
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: crm_development
+  pool: 5
+  username: vagrant
+  password: vnda
+
+test:
+  <<: *DEVELOPMENT
+  database: crm_test
